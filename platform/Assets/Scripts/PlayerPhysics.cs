@@ -14,8 +14,8 @@ public class PlayerPhysics : MonoBehaviour {
 	private Vector3 originalCentre;
 	private float colliderScale;
 	
-	private int collisionDivisionX = 3;
-	private int collisionDivisionY = 10;
+	private int collisionDivisionX = 5;
+	private int collisionDivisionY = 8;
 	
 	private float skin = .005f;
 	
@@ -108,10 +108,9 @@ public class PlayerPhysics : MonoBehaviour {
 			}
 		}
 		
-		
 		Vector2 finalTrasform = new Vector2(deltaX,deltaY);
-		
 		transform.Translate(finalTrasform, Space.World);
+		
 	}
 	
 	public void SetCollider(Vector3 size, Vector3 centre){

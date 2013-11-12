@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class GameCamera : MonoBehaviour {
 	
 	private Transform target;
-	private float trackSpeed = 10;
+	private float trackSpeed = 12;
 	
 	public void SetTarget(Transform t){
 		target = t;
@@ -17,6 +18,11 @@ public class GameCamera : MonoBehaviour {
 			float y = IncrementTowards (transform.position.y, target.position.y,trackSpeed);
 			transform.position = new Vector3(x,y,transform.position.z);
 		}
+	}
+	
+	void OnGUI() {
+		string countdown = "Christmas countdown: " + (new DateTime(2013,12,25) - DateTime.Now).Days;
+		GUI.Label (new Rect(0,0,500,30), countdown);
 	}
 	
 	//Increase n towards target by speed

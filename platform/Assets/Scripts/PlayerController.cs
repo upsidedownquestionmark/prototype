@@ -2,7 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(PlayerPhysics))]
-public class PlayerController : MonoBehaviour {
+public class PlayerController : Entity {
 	
 	//Player Handling
 	public float gravity = 20;
@@ -21,14 +21,17 @@ public class PlayerController : MonoBehaviour {
 	private bool jumping;
 	private bool sliding;
 	
+	private Sprite sprite;
+	
 	private PlayerPhysics playerPhysics;
-	private Animator animator;
+	//private Animator animator;
 
 	void Start () {
 		playerPhysics = GetComponent<PlayerPhysics>();
-		animator = GetComponent<Animator>();
+		//animator = GetComponent<Animator>();
+		sprite = GetComponentInChildren<Sprite>();
 		
-		animator.SetLayerWeight(1,1);
+		//animator.SetLayerWeight(1,1);
 	}
 	
 	void Update () {
@@ -44,13 +47,13 @@ public class PlayerController : MonoBehaviour {
 		
 			if(jumping){
 				jumping = false;
-				animator.SetBool("Jumping",false);
+				//animator.SetBool("Jumping",false);
 			}
 			
 			if(sliding){
 				if(Mathf.Abs (currentSpeed)<.25f){
 					sliding = false;
-					animator.SetBool("Sliding",false);
+					//animator.SetBool("Sliding",false);
 					
 					playerPhysics.ResetCollider();
 				}
@@ -60,22 +63,21 @@ public class PlayerController : MonoBehaviour {
 			if(Input.GetButtonDown ("Jump")){
 				amountToMove.y = jumpHeight;
 				jumping = true;
-				animator.SetBool("Jumping",true);
+				//animator.SetBool("Jumping",true);
 			}
 			
 			//sliding
 			if(Input.GetButtonDown ("Slide")){
 				sliding = true;
-				animator.SetBool("Sliding",true);
+				//animator.SetBool("Sliding",true);
 				targetSpeed = 0;
 				
 				playerPhysics.SetCollider(new Vector3(10.3f,1.5f,3f),new Vector3(.25f,.75f,0));
-			}
-			
+			}	
 		}
 		
-		animationSpeed = IncrementTowards (animationSpeed,Mathf.Abs (targetSpeed),accleration);
-		animator.SetFloat ("Speed",animationSpeed);
+		//animationSpeed = IncrementTowards (animationSpeed,Mathf.Abs (targetSpeed),accleration);
+		//animator.SetFloat ("Speed",animationSpeed);
 		
 		//Input
 		if(!sliding){
@@ -86,7 +88,8 @@ public class PlayerController : MonoBehaviour {
 			//face direction
 			float moveDir = Input.GetAxisRaw ("Horizontal");
 			if(moveDir!=0){
-				transform.eulerAngles = (moveDir>0)?Vector3.up * 180:Vector3.zero;
+				//transform.eulerAngles = (moveDir>0)?Vector3.up * 180:Vector3.zero;
+				sprite.mirror = moveDir < 0;
 			}
 		}
 		else{
