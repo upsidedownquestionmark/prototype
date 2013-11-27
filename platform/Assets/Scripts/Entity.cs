@@ -4,6 +4,7 @@ using System.Collections;
 public class Entity : MonoBehaviour {
 	
 	public float health;
+	public float currentScore;
 	public bool dead = false;
 	
 	
@@ -14,7 +15,12 @@ public class Entity : MonoBehaviour {
 			Die();
 		}
 	}
-	
+
+	public void addScore(float score){
+		currentScore += score;
+		Debug.Log (currentScore);
+	}
+
 	public void Die(){
 		Debug.Log ("Die");
 		dead = true;

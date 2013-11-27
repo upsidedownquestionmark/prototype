@@ -21,8 +21,8 @@ public class GameCamera : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		string countdown = "Christmas countdown: " + (new DateTime(2013,12,25) - DateTime.Now).Days;
-		GUI.Label (new Rect(0,0,500,30), countdown);
+		string score = "Score: " + 0;
+		GUI.Label (new Rect(600,0,500,30), score);
 	}
 	
 	//Increase n towards target by speed

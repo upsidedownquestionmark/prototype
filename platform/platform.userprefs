@@ -1,11 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Coin.cs">
     <Files>
-      <File FileName="Assets\Scripts\Axe.cs" Line="15" Column="44" />
-      <File FileName="Assets\Scripts\PlayerPhysics.cs" Line="41" Column="37" />
-      <File FileName="Assets\Scripts\Entity.cs" Line="20" Column="15" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="102" Column="51" />
+      <File FileName="Assets\Scripts\Death.cs" Line="12" Column="2" />
+      <File FileName="Assets\Scripts\PlayerPhysics.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Entity.cs" Line="24" Column="20" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="20" Column="10" />
+      <File FileName="Assets\Scripts\GameCamera.cs" Line="24" Column="31" />
+      <File FileName="Assets\Scripts\Coin.cs" Line="12" Column="43" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
