@@ -10,6 +10,7 @@ public class Coin : MonoBehaviour {
 	void OnTriggerEnter(Collider c){
 		if(c.tag == "Player"){
 			c.GetComponent<Entity>().addScore (10);
+			Destroy(this.gameObject);
 		}
 	}
 }

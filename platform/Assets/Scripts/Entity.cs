@@ -4,9 +4,13 @@ using System.Collections;
 public class Entity : MonoBehaviour {
 	
 	public float health;
+	public float maxHealth;
 	public float currentScore;
 	public bool dead = false;
 	
+	public void Start() {
+		health = maxHealth;
+	}
 	
 	public void TakeDamage(float dmg){
 		health -=dmg;
@@ -24,5 +28,10 @@ public class Entity : MonoBehaviour {
 	public void Die(){
 		Debug.Log ("Die");
 		dead = true;
+	}
+	
+	public void Reset() {
+		dead = false;
+		health = maxHealth;
 	}
 }

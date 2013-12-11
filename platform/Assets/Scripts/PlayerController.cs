@@ -8,7 +8,7 @@ public class PlayerController : Entity {
 	public float gravity = 20;
 	public float walkspeed = 8;
 	public float runspeed = 12;
-	public float accleration = 30;
+	public float acceleration = 30;
 	public float jumpHeight = 12;
 	public float slideDeceleration = 10;
 	
@@ -21,20 +21,38 @@ public class PlayerController : Entity {
 	private bool jumping;
 	private bool sliding;
 	
+	private Vector3 lastCheckpoint;
+	
 	private Sprite sprite;
 	
 	private PlayerPhysics playerPhysics;
+	private Entity entity;
 	//private Animator animator;
 
 	void Start () {
 		playerPhysics = GetComponent<PlayerPhysics>();
 		//animator = GetComponent<Animator>();
 		sprite = GetComponentInChildren<Sprite>();
+		entity = GetComponentInChildren<Entity>();
+		
+		
+		lastCheckpoint = transform.position;
 		
 		//animator.SetLayerWeight(1,1);
+		
+		base.Start();
 	}
 	
 	void Update () {
+			
+			bool dead = entity.dead;
+			
+			if(dead == true)
+			{
+				resetPlayer();
+				return;
+			}
+		
 		//reset acceleration upon collision
 		if(playerPhysics.movementStopped){
 			targetSpeed =0;
@@ -67,13 +85,13 @@ public class PlayerController : Entity {
 			}
 			
 			//sliding
-			if(Input.GetButtonDown ("Slide")){
+			if(currentSpeed != 0 && Input.GetButtonDown ("Slide")){
 				sliding = true;
 				//animator.SetBool("Sliding",true);
 				targetSpeed = 0;
 				
-				playerPhysics.SetCollider(new Vector3(10.3f,1.5f,3f),new Vector3(.25f,.75f,0));
-			}	
+				playerPhysics.SetCollider(new Vector3(1f,0.5f,1f),new Vector3(0,-0.25f,0));
+			}
 		}
 		
 		//animationSpeed = IncrementTowards (animationSpeed,Mathf.Abs (targetSpeed),accleration);
@@ -83,7 +101,7 @@ public class PlayerController : Entity {
 		if(!sliding){
 			float speed = (Input.GetButton("Run"))?runspeed:walkspeed;
 			targetSpeed = Input.GetAxisRaw("Horizontal")*speed;
-			currentSpeed = IncrementTowards(currentSpeed,targetSpeed,accleration);
+			currentSpeed = IncrementTowards(currentSpeed,targetSpeed,acceleration);
 			
 			//face direction
 			float moveDir = Input.GetAxisRaw ("Horizontal");
@@ -103,6 +121,10 @@ public class PlayerController : Entity {
 		
 	}
 	
+	public void SetCheckpoint(Vector3 checkpoint) {
+		lastCheckpoint = checkpoint;
+	}
+	
 	//Increase n towards target by speed
 	private float IncrementTowards(float n, float target, float a){
 		if(n==target){
@@ -113,5 +135,11 @@ public class PlayerController : Entity {
 			n +=a * Time.deltaTime * dir;
 			return(dir==Mathf.Sign (target-n))? n: target; //if n has now passed target then return target, otherwise return n
 		}
+	}
+	
+	private void resetPlayer()
+	{
+		transform.position = lastCheckpoint;
+		entity.Reset();
 	}
 }
