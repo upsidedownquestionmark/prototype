@@ -44,16 +44,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Axe.cs" />
-     <Compile Include="Assets\Scripts\Checkpoint.cs" />
-     <Compile Include="Assets\Scripts\Coin.cs" />
-     <Compile Include="Assets\Scripts\Death.cs" />
-     <Compile Include="Assets\Scripts\Entity.cs" />
-     <Compile Include="Assets\Scripts\GameCamera.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\PlayerPhysics.cs" />
-     <Compile Include="Assets\Scripts\Sprite.cs" />
+     <Compile Include="Assets\Scripts\Entity\Death.cs" />
+     <Compile Include="Assets\Scripts\Entity\Entity.cs" />
+     <Compile Include="Assets\Scripts\Entity\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Entity\Player\PlayerPhysics.cs" />
+     <Compile Include="Assets\Scripts\Entity\Player\PlayerSprite.cs" />
+     <Compile Include="Assets\Scripts\Entity\Sprite.cs" />
+     <Compile Include="Assets\Scripts\Game\GameCamera.cs" />
+     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Interaction\Axe.cs" />
+     <Compile Include="Assets\Scripts\Interaction\Checkpoint.cs" />
+     <Compile Include="Assets\Scripts\Interaction\Coin.cs" />
+     <Compile Include="Assets\Scripts\Interaction\LevelEnd.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
