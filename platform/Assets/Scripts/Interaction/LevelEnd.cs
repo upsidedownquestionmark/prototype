@@ -18,7 +18,8 @@ public class LevelEnd : MonoBehaviour {
 	
 	void OnGUI () {
 		if (activated)
-			GUI.DrawTexture (new Rect(0,0,Screen.width,Screen.height), winGraphic);
+			Application.LoadLevel(2);
+			//GUI.DrawTexture (new Rect(0,0,Screen.width,Screen.height), winGraphic);
 	}
 	
 	void OnTriggerEnter (Collider other) {

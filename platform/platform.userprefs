@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Entity\Player\PlayerController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\platform\Assets\Scripts\UI\WinScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\Entity\Player\PlayerPhysics.cs" Line="113" Column="3" />
-      <File FileName="Assets\Scripts\Entity\Player\PlayerController.cs" Line="43" Column="21" />
+      <File FileName="..\..\platform\Assets\Scripts\UI\Menu.cs" Line="5" Column="1" />
+      <File FileName="..\..\platform\Assets\Scripts\UI\WinScript.cs" Line="10" Column="67" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
