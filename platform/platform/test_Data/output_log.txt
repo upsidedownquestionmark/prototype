@@ -1,0 +1,65 @@
+Initialize engine version: 4.3.0f4 (e01000627d60)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.1106]
+    Renderer: NVIDIA GeForce GTX 560 
+    Vendor:   NVIDIA
+    VRAM:     978 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Jamie\Documents\GitHub\platform\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jamie\Documents\GitHub\platform\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jamie\Documents\GitHub\platform\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jamie\Documents\GitHub\platform\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.037 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+UnloadTime: 0.649392 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4133.
+Total: 1.667427 ms (FindLiveObjects: 0.191432 ms CreateObjectMapping: 0.032142 ms MarkObjects: 0.329389 ms  DeleteObjects: 0.479008 ms)
+
+Die
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Die
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Die
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 11.980333 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 63 unused Assets to reduce memory usage. Loaded Objects now: 135.
+Total: 6.693319 ms (FindLiveObjects: 0.017066 ms CreateObjectMapping: 0.025315 ms MarkObjects: 0.217886 ms  DeleteObjects: 5.347032 ms)
+
+UnloadTime: 0.496644 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 133.
+Total: 1.290535 ms (FindLiveObjects: 0.017066 ms CreateObjectMapping: 0.022755 ms MarkObjects: 0.212197 ms  DeleteObjects: 0.007395 ms)
+
+UnloadTime: 0.519399 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 4136.
+Total: 1.560191 ms (FindLiveObjects: 0.207361 ms CreateObjectMapping: 0.037831 ms MarkObjects: 0.354420 ms  DeleteObjects: 0.193992 ms)
+
+HandleD3DDeviceLost
+  HandleD3DDeviceLost: needs reset, doing it
+FullResetD3DDevice
+ResetD3DDevice
+dev->Reset
+D3Dwindow device not lost anymore
+UnloadTime: 12.195090 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 65 unused Assets to reduce memory usage. Loaded Objects now: 128.
+Total: 2.602119 ms (FindLiveObjects: 0.016497 ms CreateObjectMapping: 0.036693 ms MarkObjects: 0.238366 ms  DeleteObjects: 1.297646 ms)
+
